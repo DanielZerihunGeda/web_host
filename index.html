@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration Form</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -15,7 +17,7 @@
         }
         body {
             background: url('data:image/jpg;base64,{{img_base64}}') center/cover;
-            background-size: 100%; /* Zoom out !1!*/
+            background-size: 120%; /* Zoom out  */
             background-position: center;
             font-family: 'Poppins', sans-serif;
             color: #ffffff;
@@ -25,6 +27,43 @@
             align-items: center;
             height: 100vh;
             margin: 0;
+            position: relative; /* Ensure the banner is positioned relative to the body */
+        }
+        .banner {
+            background-color: #ff3b3b; /* Red background color */
+            color: #ffffff; /* White text color */
+            text-align: center;
+            padding: 30px 0;
+            width: 100%;
+            position: absolute; /* Position absolute to sit on top of other content */
+            top: 0; /* Stick to the top of the page */
+            z-index: 1000; /* Ensure it's above other elements */
+            font-size: 24px;
+            font-weight: 600;
+            font-family: 'Poppins', sans-serif;
+            letter-spacing: 1px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+            border-bottom: 2px solid #61da29; /* White border at the bottom */
+            background-image: linear-gradient(to right, #ff3b3b, #ff6e6e); /* Gradient background */
+        }
+        .banner p {
+            margin: 0;
+        }
+        .banner span {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #ffffff; /* White background for button */
+            color: #080710; /* Dark text color */
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 500;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            box-shadow: 0 3px 6px rgba(5, 185, 5, 0.822); /* Shadow for button */
+        }
+        .banner span:hover {
+            background-color: #080710; /* Dark background on hover */
+            color: #ffffff; /* White text on hover */
         }
         .registration-form {
             width: 400px;
@@ -34,6 +73,7 @@
             backdrop-filter: blur(10px);
             border: 2px solid rgba(255, 255, 255, 0.1);
             box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+            margin-top: 150px; /* Adjust margin to push down content below the banner */
         }
         .registration-form h3 {
             font-size: 32px;
@@ -103,6 +143,9 @@
     </style>
 </head>
 <body>
+    <div class="banner">
+        <p>የክረምት Bootcamp</p2>
+    </div>
     <div class="registration-form">
         <h3>Register Here</h3>
         <form>
