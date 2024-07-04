@@ -17,7 +17,7 @@
         }
         body {
             background: url('data:image/jpg;base64,{{img_base64}}') center/cover;
-            background-size: 120%; /* Zoom out  */
+            background-size: 100%; /* Zoom out by setting this to greater than 100% */
             background-position: center;
             font-family: 'Poppins', sans-serif;
             color: #ffffff;
@@ -38,12 +38,12 @@
             position: absolute; /* Position absolute to sit on top of other content */
             top: 0; /* Stick to the top of the page */
             z-index: 1000; /* Ensure it's above other elements */
-            font-size: 24px;
+            font-size: 36px; /* Increased font size */
             font-weight: 600;
             font-family: 'Poppins', sans-serif;
             letter-spacing: 1px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Shadow for depth */
-            border-bottom: 2px solid #61da29; /* White border at the bottom */
+            border-bottom: 2px solid #ffffff; /* White border at the bottom */
             background-image: linear-gradient(to right, #ff3b3b, #ff6e6e); /* Gradient background */
         }
         .banner p {
@@ -59,7 +59,7 @@
             border-radius: 25px;
             font-weight: 500;
             transition: background-color 0.3s ease, color 0.3s ease;
-            box-shadow: 0 3px 6px rgba(5, 185, 5, 0.822); /* Shadow for button */
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Shadow for button */
         }
         .banner span:hover {
             background-color: #080710; /* Dark background on hover */
@@ -144,24 +144,30 @@
 </head>
 <body>
     <div class="banner">
-        <p>የክረምት Bootcamp</p2>
+        <p style="font-size: 32px;">የክረምት CODING Bootcamp</p>
     </div>
     <div class="registration-form">
         <h3>Register Here</h3>
         <form>
             <label for="full-name">Full Name</label>
             <input type="text" id="full-name" placeholder="Enter your full name">
-            <label for="grade">Grade</label>
-            <input type="text" id="grade" placeholder="Enter your grade">
+            <label for="grade">Select Grade</label>
+            <select id="grade">
+                <option value="7th">7th</option>
+                <option value="8th">8th</option>
+                <option value="9th">9th</option>
+                <option value="10th">10th</option>
+                <option value="11th">11th</option>
+                <option value="12th">12th</option>
+            </select>
             <label for="sex">Sex</label>
             <select id="sex">
                 <option value="male">Male</option>
                 <option value="female">Female</option>
-                <option value="other">Other</option>
             </select>
             <label for="phone-number">Phone Number</label>
             <input type="text" id="phone-number" placeholder="Enter your phone number">
-            <button type="submit">Register</button>
+            <button type="submit">Join The Waitlist !</button>
         </form>
         <div class="social">
             <div><i class="fab fa-telegram"></i> Telegram</div>
