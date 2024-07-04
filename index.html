@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Registration Form</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <style media="screen">
+        *,
+        *:before,
+        *:after {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: url('data:image/jpg;base64,{{img_base64}}') center/cover;
+            background-size: 100%; /* Zoom out !1!*/
+            background-position: center;
+            font-family: 'Poppins', sans-serif;
+            color: #ffffff;
+            background-color: #080710;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .registration-form {
+            width: 400px;
+            padding: 40px;
+            background-color: rgba(255, 255, 255, 0.13);
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+        }
+        .registration-form h3 {
+            font-size: 32px;
+            font-weight: 500;
+            line-height: 42px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .registration-form label {
+            font-size: 16px;
+            font-weight: 500;
+            margin-top: 20px;
+            display: block;
+        }
+        .registration-form input,
+        .registration-form select {
+            width: 100%;
+            height: 50px;
+            background-color: rgba(255, 255, 255, 0.07);
+            border-radius: 3px;
+            border: none;
+            padding: 0 10px;
+            margin-top: 8px;
+            font-size: 14px;
+            color: #ffffff;
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+        }
+        .registration-form select {
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iOCIgdmlld0JveD0iMCAwIDE2IDgiIHZlcnNpb249IjEiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTEgMSBMOC43NSAwLjI1TDE2IDEiIHZsa2t0ZXN0PSJub25lIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlPSJ3aGl0ZSIvPjxwYXRoIGQ9Ik0gMTAgOC4yNSBMIEwgMTYgMi4yNSBMIDE2IDQiIHZsa2t0ZXN0PSJub25lIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlPSJ3aGl0ZSIvPjwvc3ZnPg==');
+            background-repeat: no-repeat;
+            background-position: right 10px center;
+            background-size: 12px;
+        }
+        .registration-form button {
+            width: 100%;
+            background-color: #ffffff;
+            color: #080710;
+            padding: 15px 0;
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 30px;
+            border: none;
+        }
+        .social {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+        }
+        .social div {
+            background-color: rgba(255, 255, 255, 0.27);
+            color: #eaf0fb;
+            border-radius: 3px;
+            padding: 5px 10px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+        .social div:hover {
+            background-color: rgba(255, 255, 255, 0.47);
+        }
+        .social i {
+            margin-right: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="registration-form">
+        <h3>Register Here</h3>
+        <form>
+            <label for="full-name">Full Name</label>
+            <input type="text" id="full-name" placeholder="Enter your full name">
+            <label for="grade">Grade</label>
+            <input type="text" id="grade" placeholder="Enter your grade">
+            <label for="sex">Sex</label>
+            <select id="sex">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+            <label for="phone-number">Phone Number</label>
+            <input type="text" id="phone-number" placeholder="Enter your phone number">
+            <button type="submit">Register</button>
+        </form>
+        <div class="social">
+            <div><i class="fab fa-telegram"></i> Telegram</div>
+            <div><i class="fab fa-tiktok"></i> TikTok</div>
+        </div>
+    </div>
+</body>
+</html>
