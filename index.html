@@ -7,7 +7,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
-    <style media="screen">
+   
+<style media="screen">
         *,
         *:before,
         *:after {
@@ -17,7 +18,7 @@
         }
         body {
             background: url('data:image/jpg;base64,{{img_base64}}') center/cover;
-            background-size: 100%; /* Zoom out by setting this to greater than 100% */
+            background-size: 100%; /* Zoom out*/
             background-position: center;
             font-family: 'Poppins', sans-serif;
             color: #ffffff;
@@ -27,24 +28,23 @@
             align-items: center;
             height: 100vh;
             margin: 0;
-            position: relative; /* Ensure the banner is positioned relative to the body */
-        }
+            position: relative; 
         .banner {
-            background-color: #ff3b3b; /* Red background color */
-            color: #ffffff; /* White text color */
+            background-color: #ff3b3b; 
+            color: #ffffff;
             text-align: center;
             padding: 30px 0;
             width: 100%;
-            position: absolute; /* Position absolute to sit on top of other content */
-            top: 0; /* Stick to the top of the page */
-            z-index: 1000; /* Ensure it's above other elements */
-            font-size: 36px; /* Increased font size */
+            position: absolute; /* */
+            top: 0; 
+            z-index: 1000; 
+            font-size: 36px; 
             font-weight: 600;
             font-family: 'Poppins', sans-serif;
             letter-spacing: 1px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Shadow for depth */
-            border-bottom: 2px solid #ffffff; /* White border at the bottom */
-            background-image: linear-gradient(to right, #ff3b3b, #ff6e6e); /* Gradient background */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); 
+            border-bottom: 2px solid #ffffff; 
+            background-image: linear-gradient(to right, #ff3b3b, #ff6e6e); 
         }
         .banner p {
             margin: 0;
@@ -64,62 +64,6 @@
         .banner span:hover {
             background-color: #080710; /* Dark background on hover */
             color: #ffffff; /* White text on hover */
-        }
-        .registration-form {
-            width: 400px;
-            padding: 40px;
-            background-color: rgba(255, 255, 255, 0.13);
-            border-radius: 10px;
-            backdrop-filter: blur(10px);
-            border: 2px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
-            margin-top: 150px; /* Adjust margin to push down content below the banner */
-        }
-        .registration-form h3 {
-            font-size: 32px;
-            font-weight: 500;
-            line-height: 42px;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .registration-form label {
-            font-size: 16px;
-            font-weight: 500;
-            margin-top: 20px;
-            display: block;
-        }
-        .registration-form input,
-        .registration-form select {
-            width: 100%;
-            height: 50px;
-            background-color: rgba(255, 255, 255, 0.07);
-            border-radius: 3px;
-            border: none;
-            padding: 0 10px;
-            margin-top: 8px;
-            font-size: 14px;
-            color: #ffffff;
-            appearance: none;
-            -webkit-appearance: none;
-            -moz-appearance: none;
-        }
-        .registration-form select {
-            background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iOCIgdmlld0JveD0iMCAwIDE2IDgiIHZlcnNpb249IjEiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTEgMSBMOC43NSAwLjI1TDE2IDEiIHZsa2t0ZXN0PSJub25lIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlPSJ3aGl0ZSIvPjxwYXRoIGQ9Ik0gMTAgOC4yNSBMIEwgMTYgMi4yNSBMIDE2IDQiIHZsa2t0ZXN0PSJub25lIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlPSJ3aGl0ZSIvPjwvc3ZnPg==');
-            background-repeat: no-repeat;
-            background-position: right 10px center;
-            background-size: 12px;
-        }
-        .registration-form button {
-            width: 100%;
-            background-color: #ffffff;
-            color: #080710;
-            padding: 15px 0;
-            font-size: 18px;
-            font-weight: 600;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-top: 30px;
-            border: none;
         }
         .social {
             margin-top: 30px;
@@ -148,11 +92,11 @@
     </div>
     <div class="registration-form">
         <h3>Register Here</h3>
-        <form>
+        <form id="registrationForm">
             <label for="full-name">Full Name</label>
-            <input type="text" id="full-name" placeholder="Enter your full name">
+            <input type="text" id="full-name" name="full-name" placeholder="Enter your full name">
             <label for="grade">Select Grade</label>
-            <select id="grade">
+            <select id="grade" name="grade">
                 <option value="7th">7th</option>
                 <option value="8th">8th</option>
                 <option value="9th">9th</option>
@@ -161,18 +105,29 @@
                 <option value="12th">12th</option>
             </select>
             <label for="sex">Sex</label>
-            <select id="sex">
+            <select id="sex" name="sex">
                 <option value="male">Male</option>
                 <option value="female">Female</option>
             </select>
             <label for="phone-number">Phone Number</label>
-            <input type="text" id="phone-number" placeholder="Enter your phone number">
-            <button type="submit">Join The Waitlist !</button>
+            <input type="text" id="phone-number" name="phone-number" placeholder="Enter your phone number">
+            <button type="button" onclick="submitForm()">Join The Waitlist !</button>
         </form>
         <div class="social">
             <div><i class="fab fa-telegram"></i> Telegram</div>
             <div><i class="fab fa-tiktok"></i> TikTok</div>
         </div>
     </div>
+    <script>
+        function submitForm() {
+            const form = document.getElementById('registrationForm');
+            const formData = new FormData(form);
+            const params = new URLSearchParams();
+            formData.forEach((value, key) => {
+                params.append(key, value);
+            });
+            window.location.href = `http://localhost:8501/?${params.toString()}`;
+        }
+    </script>
 </body>
 </html>
